@@ -1,0 +1,22 @@
+{
+  "name": "info3165-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akleinikkink9587/INFO3165-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akleinikkink9587/INFO3165-Project/issues"
+  },
+  "homepage": "https://github.com/Akleinikkink9587/INFO3165-Project#readme",
+  "dependencies": {
+    "face-api.js": "^0.22.2"
+  }
+}

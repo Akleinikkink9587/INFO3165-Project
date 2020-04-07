@@ -35,6 +35,8 @@ app.post('/submit', async function(req, res, next){
 
     var uuid = uuidv4();
 
+    console.log(uuid);
+
     var fileName;
     var fileMime;
 
@@ -57,8 +59,8 @@ app.post('/submit', async function(req, res, next){
         res.cookie("numFaces", numFaces);
 
         res.sendFile(path.join(__dirname, "tmp", uuid + "_mod_" + fileName), async (err) =>{
-            //await unlink(path.join(__dirname, "tmp", uuid + "_" + fileName));
-            //await unlink(path.join(__dirname, "tmp", uuid + "_mod_" + fileName));
+            await unlink(path.join(__dirname, "tmp", uuid + "_" + fileName));
+            await unlink(path.join(__dirname, "tmp", uuid + "_mod_" + fileName));
 
             if(err) {
                 next(err);

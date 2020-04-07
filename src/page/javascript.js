@@ -1,16 +1,14 @@
 var imageCanvas;
 
-var response;
+var message;
 
 window.onload = () => {
     imageCanvas = document.getElementById("imageCanvas");
+    message = document.getElementById("message");
 
     var form = document.forms.namedItem("fileform");
 
-    form.addEventListener('submit', (ev) => {
-
-        console.log(form);
-    
+    form.addEventListener('submit', (ev) => {   
         var formData = new FormData(form);
       
         var xhr = new XMLHttpRequest();
@@ -31,6 +29,8 @@ window.onload = () => {
                     var context = imageCanvas.getContext("2d");
 
                     context.drawImage(image, 0, 0);
+
+                    message.innerHTML = "There are " + document.cookie.split('=')[1] + " faces in the image.";                    
                 };
           } else {
             alert("Error " + xhrEvent.status + " occurred when trying to upload your file.");

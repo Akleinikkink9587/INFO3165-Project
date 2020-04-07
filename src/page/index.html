@@ -6,21 +6,28 @@
   <meta charset="utf-8">
 
   <title>INFO3165 Project</title>
-
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu" />
   <link rel="stylesheet" href="stylesheet.css">
   <script src="javascript.js"></script>
 
 </head>
 
 <body>
-  <h1>INFO3165 Project</h1>
-  <form enctype="multipart/form-data" method="post" name="fileform">
-    <input type="file" name="file" id="file" accept=".png, .jpg, .jpeg">
-    <input type="submit" value="Send">
-  </form>
 
-  <canvas id="imageCanvas"></canvas>
+  <h1>INFO3165 Project</h1>
+  <h2>Facial Recognition</h2>
+  <p>Upload a new image and it will identify how many people/faces are in the image!</p>
+
+  <form enctype="multipart/form-data" method="post" name="fileform" class="box">
+    <p><strong>Upload New Photo</strong></p>
+    <input type="file" name="file" id="file" accept=".png, .jpg, .jpeg" class="fileUpload">
+    <br />
+    <br />
+    <br />
+    <input type="submit" value="Send" class="button black">
+  </form>
   <h3 id="message"></h3>
+  <canvas id="imageCanvas"></canvas>
 </body>
 
 </html>

@@ -103,4 +103,6 @@ app.listen(port, function () {
     }
 
     console.log('Directory created: ' + tempDir);
+    
+    console.log("Enviroment: " + process.env.NODE_ENV);
 });

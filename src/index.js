@@ -11,7 +11,7 @@ const { promisify } = require("util");
 const unlink = promisify(fs.unlink);
 const writeFile = promisify(fs.writeFile);
 
-var port = 8080; //TODO:
+var port = process.env.PORT || 8080;
 
 // Create a new express application instance
 const app = express();
